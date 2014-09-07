@@ -14,7 +14,7 @@
 
 #import "OHTMainMenu.h"
 
-@interface OHTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface OHTMasterViewController : UITableViewController
 
 @property(strong, nonatomic) OHTMainMenu* menu;
 

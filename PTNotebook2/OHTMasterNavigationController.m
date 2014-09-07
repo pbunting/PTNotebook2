@@ -37,28 +37,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"OHTMasterNavigationController.prepareForSegue -> %@", [segue identifier]);
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 #pragma mark OHTMainMenuOptionHandler
 - (void) showTrainees
 {
+    NSLog(@"OHTMasterNavigationController.showTrainees");
     [self.detailNavigationController.topViewController performSegueWithIdentifier:@"showTrainees" sender:self];
 }
 
 #pragma mark OHTDetailHandler
-- (void) selectTrainee:(NSManagedObject *)trainee
+- (void) focusOnTrainee:(NSManagedObject *)trainee
 {
+    NSLog(@"OHTMasterNavigationController.focusOnTrainee");
+    [self.currentViewController performSegueWithIdentifier:@"showOneTrainee" sender:self];
     [self.detailNavigationController.topViewController performSegueWithIdentifier:@"showTrainee" sender:self];
-//    [self.currentViewController push ]
 }
 
 @end

@@ -16,6 +16,6 @@
 
 @interface OHTMainMenu : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, weak) id <OHTMainMenuOptionHandler> delegate;
+@property (nonatomic, strong) id <OHTMainMenuOptionHandler> delegate;
 
 @end

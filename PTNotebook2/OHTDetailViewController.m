@@ -62,6 +62,12 @@
     self.masterPopoverController = popoverController;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"OHTDetailViewController.prepareForSegue -> %@", [segue identifier]);
+    [self.flowDelegate prepareController:[segue destinationViewController] ForSegue:segue];
+}
+
 - (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
     // Called when the view is shown again in the split view, invalidating the button and popover controller.

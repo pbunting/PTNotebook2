@@ -11,6 +11,8 @@
 #import "OHTMasterViewController.h"
 
 #import "OHTMasterNavigationController.h"
+#import "OHTDetailNavigationController.h"
+#import "OHTDetailViewController.h"
 
 @implementation OHTAppDelegate
 
@@ -25,6 +27,9 @@
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
+        OHTDetailNavigationController* detailNavigationController = (OHTDetailNavigationController*)navigationController;
+        OHTDetailViewController* detailViewController = (OHTDetailViewController*)navigationController.topViewController;
+        detailViewController.flowDelegate = detailNavigationController;
         
         OHTMasterNavigationController *masterNavigationController = splitViewController.viewControllers[0];
         masterNavigationController.managedObjectContext = self.managedObjectContext;
@@ -33,6 +38,8 @@
         OHTMainMenu* mainMenu = [[OHTMainMenu alloc] init];
         mainMenu.delegate = masterNavigationController;
         controller.menu = mainMenu;
+
+        detailNavigationController.detailHandlerDelegate = masterNavigationController;
     } else {
         OHTMasterNavigationController *navigationController = (OHTMasterNavigationController *)self.window.rootViewController;
         OHTMasterViewController *controller = (OHTMasterViewController *)navigationController.topViewController;

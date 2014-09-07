@@ -10,13 +10,13 @@
 
 @protocol OHTTraineesViewControllerSelect <NSObject>
 
-- (void) selectTrainee;
+- (void) traineeSelectionMade;
 
 @end
 
 @interface OHTTraineesViewController : UIViewController
 
-@property (nonatomic, weak) id <OHTTraineesViewControllerSelect> flowDelegate;
+@property (nonatomic, strong) id <OHTTraineesViewControllerSelect> flowDelegate;
 
 - (void) makeSelection;
 

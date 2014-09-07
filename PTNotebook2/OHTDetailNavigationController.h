@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 
 #import "OHTTraineesViewController.h"
+#import "OHTDetailViewController.h"
 
 @protocol OHTDetailHandler <NSObject>
 
-- (void) selectTrainee:(NSManagedObject*) trainee;
+- (void) focusOnTrainee:(NSManagedObject*) trainee;
 
 @end
 
-@interface OHTDetailNavigationController : UINavigationController <OHTTraineesViewControllerSelect>
+@interface OHTDetailNavigationController : UINavigationController <OHTTraineesViewControllerSelect, OHTDetailViewFlowDelegate>
 
 @property (weak, nonatomic) IBOutlet UIViewController* currentViewController;
+
+@property (strong, nonatomic) id <OHTDetailHandler> detailHandlerDelegate;
 
 @end

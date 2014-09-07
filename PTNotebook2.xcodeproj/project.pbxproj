@@ -30,6 +30,8 @@
 		88670AD819BB39900054052B /* OHTMasterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670AD719BB39900054052B /* OHTMasterNavigationController.m */; };
 		88670ADB19BB3B1D0054052B /* OHTMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670ADA19BB3B1D0054052B /* OHTMainMenu.m */; };
 		88670ADE19BB415C0054052B /* OHTTraineesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670ADD19BB415C0054052B /* OHTTraineesViewController.m */; };
+		88DF0FFE19BC75BA0025D8FD /* OHTTraineesMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DF0FFD19BC75BA0025D8FD /* OHTTraineesMasterViewController.m */; };
+		88DF100119BC78F10025D8FD /* OHTTraineesMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DF100019BC78F10025D8FD /* OHTTraineesMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		88670ADA19BB3B1D0054052B /* OHTMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTMainMenu.m; sourceTree = "<group>"; };
 		88670ADC19BB415C0054052B /* OHTTraineesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTTraineesViewController.h; sourceTree = "<group>"; };
 		88670ADD19BB415C0054052B /* OHTTraineesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTTraineesViewController.m; sourceTree = "<group>"; };
+		88DF0FFC19BC75BA0025D8FD /* OHTTraineesMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTTraineesMasterViewController.h; sourceTree = "<group>"; };
+		88DF0FFD19BC75BA0025D8FD /* OHTTraineesMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTTraineesMasterViewController.m; sourceTree = "<group>"; };
+		88DF0FFF19BC78F10025D8FD /* OHTTraineesMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTTraineesMenu.h; sourceTree = "<group>"; };
+		88DF100019BC78F10025D8FD /* OHTTraineesMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTTraineesMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +147,13 @@
 				88670AA419BB38C10054052B /* OHTAppDelegate.m */,
 				88670AA619BB38C10054052B /* Main_iPhone.storyboard */,
 				88670AD919BB3B1D0054052B /* OHTMainMenu.h */,
+				88DF0FFF19BC78F10025D8FD /* OHTTraineesMenu.h */,
+				88DF100019BC78F10025D8FD /* OHTTraineesMenu.m */,
 				88670ADA19BB3B1D0054052B /* OHTMainMenu.m */,
 				88670AA919BB38C10054052B /* Main_iPad.storyboard */,
 				88670AAF19BB38C10054052B /* OHTMasterViewController.h */,
+				88DF0FFC19BC75BA0025D8FD /* OHTTraineesMasterViewController.h */,
+				88DF0FFD19BC75BA0025D8FD /* OHTTraineesMasterViewController.m */,
 				88670AD619BB39900054052B /* OHTMasterNavigationController.h */,
 				88670AD719BB39900054052B /* OHTMasterNavigationController.m */,
 				88670ADC19BB415C0054052B /* OHTTraineesViewController.h */,
@@ -291,10 +301,12 @@
 				88670AD519BB39110054052B /* OHTDetailNavigationController.m in Sources */,
 				88670AB419BB38C10054052B /* OHTDetailViewController.m in Sources */,
 				88670AA519BB38C10054052B /* OHTAppDelegate.m in Sources */,
+				88DF0FFE19BC75BA0025D8FD /* OHTTraineesMasterViewController.m in Sources */,
 				88670AD819BB39900054052B /* OHTMasterNavigationController.m in Sources */,
 				88670ADE19BB415C0054052B /* OHTTraineesViewController.m in Sources */,
 				88670AA119BB38C10054052B /* main.m in Sources */,
 				88670ADB19BB3B1D0054052B /* OHTMainMenu.m in Sources */,
+				88DF100119BC78F10025D8FD /* OHTTraineesMenu.m in Sources */,
 				88670AB119BB38C10054052B /* OHTMasterViewController.m in Sources */,
 				88670AAE19BB38C10054052B /* PTNotebook2.xcdatamodeld in Sources */,
 			);
@@ -511,6 +523,7 @@
 				88670ACF19BB38C10054052B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88670AD019BB38C10054052B /* Build configuration list for PBXNativeTarget "PTNotebook2Tests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				88670AD219BB38C10054052B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

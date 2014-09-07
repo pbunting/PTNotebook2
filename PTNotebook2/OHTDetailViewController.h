@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol OHTDetailViewFlowDelegate <NSObject>
+
+- (void) prepareController:(UIViewController*)controller ForSegue:(UIStoryboardSegue *)segue;
+
+@end
+
 @interface OHTDetailViewController : UIViewController <UISplitViewControllerDelegate>
+
+@property (strong, nonatomic) id <OHTDetailViewFlowDelegate> flowDelegate;
 
 @property (strong, nonatomic) id detailItem;
 
