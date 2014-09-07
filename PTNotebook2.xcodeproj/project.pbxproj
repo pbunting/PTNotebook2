@@ -26,6 +26,10 @@
 		88670AC019BB38C10054052B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88670A9819BB38C10054052B /* CoreData.framework */; };
 		88670AC819BB38C10054052B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88670AC619BB38C10054052B /* InfoPlist.strings */; };
 		88670ACA19BB38C10054052B /* PTNotebook2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670AC919BB38C10054052B /* PTNotebook2Tests.m */; };
+		88670AD519BB39110054052B /* OHTDetailNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670AD419BB39110054052B /* OHTDetailNavigationController.m */; };
+		88670AD819BB39900054052B /* OHTMasterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670AD719BB39900054052B /* OHTMasterNavigationController.m */; };
+		88670ADB19BB3B1D0054052B /* OHTMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670ADA19BB3B1D0054052B /* OHTMainMenu.m */; };
+		88670ADE19BB415C0054052B /* OHTTraineesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88670ADD19BB415C0054052B /* OHTTraineesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,14 @@
 		88670AC519BB38C10054052B /* PTNotebook2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTNotebook2Tests-Info.plist"; sourceTree = "<group>"; };
 		88670AC719BB38C10054052B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		88670AC919BB38C10054052B /* PTNotebook2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTNotebook2Tests.m; sourceTree = "<group>"; };
+		88670AD319BB39110054052B /* OHTDetailNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTDetailNavigationController.h; sourceTree = "<group>"; };
+		88670AD419BB39110054052B /* OHTDetailNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTDetailNavigationController.m; sourceTree = "<group>"; };
+		88670AD619BB39900054052B /* OHTMasterNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTMasterNavigationController.h; sourceTree = "<group>"; };
+		88670AD719BB39900054052B /* OHTMasterNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTMasterNavigationController.m; sourceTree = "<group>"; };
+		88670AD919BB3B1D0054052B /* OHTMainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTMainMenu.h; sourceTree = "<group>"; };
+		88670ADA19BB3B1D0054052B /* OHTMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTMainMenu.m; sourceTree = "<group>"; };
+		88670ADC19BB415C0054052B /* OHTTraineesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTTraineesViewController.h; sourceTree = "<group>"; };
+		88670ADD19BB415C0054052B /* OHTTraineesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTTraineesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +140,22 @@
 				88670AA319BB38C10054052B /* OHTAppDelegate.h */,
 				88670AA419BB38C10054052B /* OHTAppDelegate.m */,
 				88670AA619BB38C10054052B /* Main_iPhone.storyboard */,
+				88670AD919BB3B1D0054052B /* OHTMainMenu.h */,
+				88670ADA19BB3B1D0054052B /* OHTMainMenu.m */,
 				88670AA919BB38C10054052B /* Main_iPad.storyboard */,
 				88670AAF19BB38C10054052B /* OHTMasterViewController.h */,
+				88670AD619BB39900054052B /* OHTMasterNavigationController.h */,
+				88670AD719BB39900054052B /* OHTMasterNavigationController.m */,
+				88670ADC19BB415C0054052B /* OHTTraineesViewController.h */,
+				88670ADD19BB415C0054052B /* OHTTraineesViewController.m */,
 				88670AB019BB38C10054052B /* OHTMasterViewController.m */,
 				88670AB219BB38C10054052B /* OHTDetailViewController.h */,
 				88670AB319BB38C10054052B /* OHTDetailViewController.m */,
 				88670AB519BB38C10054052B /* Images.xcassets */,
 				88670AAC19BB38C10054052B /* PTNotebook2.xcdatamodeld */,
 				88670A9B19BB38C10054052B /* Supporting Files */,
+				88670AD319BB39110054052B /* OHTDetailNavigationController.h */,
+				88670AD419BB39110054052B /* OHTDetailNavigationController.m */,
 			);
 			path = PTNotebook2;
 			sourceTree = "<group>";
@@ -268,9 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88670AD519BB39110054052B /* OHTDetailNavigationController.m in Sources */,
 				88670AB419BB38C10054052B /* OHTDetailViewController.m in Sources */,
 				88670AA519BB38C10054052B /* OHTAppDelegate.m in Sources */,
+				88670AD819BB39900054052B /* OHTMasterNavigationController.m in Sources */,
+				88670ADE19BB415C0054052B /* OHTTraineesViewController.m in Sources */,
 				88670AA119BB38C10054052B /* main.m in Sources */,
+				88670ADB19BB3B1D0054052B /* OHTMainMenu.m in Sources */,
 				88670AB119BB38C10054052B /* OHTMasterViewController.m in Sources */,
 				88670AAE19BB38C10054052B /* PTNotebook2.xcdatamodeld in Sources */,
 			);

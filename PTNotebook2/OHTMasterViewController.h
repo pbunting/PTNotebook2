@@ -12,11 +12,13 @@
 
 #import <CoreData/CoreData.h>
 
+#import "OHTMainMenu.h"
+
 @interface OHTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) OHTDetailViewController *detailViewController;
+@property(strong, nonatomic) OHTMainMenu* menu;
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+//@property (strong, nonatomic) OHTDetailViewController *detailViewController;
+//
 
 @end

@@ -10,6 +10,8 @@
 
 #import "OHTMasterViewController.h"
 
+#import "OHTMasterNavigationController.h"
+
 @implementation OHTAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -24,13 +26,20 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
         
-        UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
+        OHTMasterNavigationController *masterNavigationController = splitViewController.viewControllers[0];
+        masterNavigationController.managedObjectContext = self.managedObjectContext;
+        masterNavigationController.detailNavigationController = navigationController;
         OHTMasterViewController *controller = (OHTMasterViewController *)masterNavigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
+        OHTMainMenu* mainMenu = [[OHTMainMenu alloc] init];
+        mainMenu.delegate = masterNavigationController;
+        controller.menu = mainMenu;
     } else {
-        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+        OHTMasterNavigationController *navigationController = (OHTMasterNavigationController *)self.window.rootViewController;
         OHTMasterViewController *controller = (OHTMasterViewController *)navigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
+        navigationController.managedObjectContext = self.managedObjectContext;
+        OHTMainMenu* mainMenu = [[OHTMainMenu alloc] init];
+        mainMenu.delegate = navigationController;
+        controller.menu = mainMenu;
     }
     return YES;
 }
